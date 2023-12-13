@@ -1,4 +1,16 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 3.8)
+include(FetchContent)
+
+FetchContent_Declare(
+  hidapi
+  GIT_REPOSITORY https://github.com/libusb/hidapi.git
+  GIT_TAG        hidapi-0.14.0
+  FIND_PACKAGE_ARGS NAMES HIDAPI
+)
+
+# After the following call, the CMake targets defined by googletest and
+# Catch2 will be available to the rest of the build
+FetchContent_MakeAvailable(HIDAPI)
 
 project (blinkstickcpp LANGUAGES CXX)
 

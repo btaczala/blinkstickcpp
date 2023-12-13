@@ -1,6 +1,6 @@
 #include "blinkstick/device.hpp"
 
-#include <hidapi/hidapi.h>
+#include <hidapi.h>
 
 #include <array>
 
